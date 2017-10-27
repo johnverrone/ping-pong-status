@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Ping Pong Status</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font: 48px Lato, "Open Sans", Helvetica, sans-serif;
+      text-align: center;
+      background-color: #031628;
+    }
+
+    h1 {
+      font-weight: 400;
+    }
+
+    h2 {
+      font-weight: 100;
+    }
+
+    #title {
+      color: #60dce5;
+      margin-top: 20%;
+    }
+
+    #open {
+      color: #3e8607;
+    }
+
+    #in-use {
+      color: #971E08;
+      display: none;
+    }
+  </style>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    $(function () {
+      var socket = io();
+      socket.on('toggle', function (msg) {
+        if ($('#open:visible').length == 0) {
+          $('#open').show();
+          $('#in-use').hide();
+        } else {
+          $('#in-use').show();
+          $('#open').hide();
+        }
+
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h2 id="title">PING PONG TABLES ARE</h2>
+  <h1 id="open">OPEN</h1>
+  <h1 id="in-use">IN USE</h1>
+</body>
+
+</html>
