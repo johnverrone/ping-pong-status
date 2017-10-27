@@ -1,0 +1,5 @@
+---
+applications:
+- name: ping-pong-status
+  memory: 128M
+  command: node server.js
