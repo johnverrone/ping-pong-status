@@ -14,7 +14,10 @@ Must have node and npm installed.
 
 1. `git clone https://github.homedepot.com/jxv5520/ping-pong-status.git`
 2. `cd ping-pong-status && npm install`
-3. `node server.js`
+
+### Running locally
+
+1. `node server.js`
 
 ## Deployment
 
