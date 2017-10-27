@@ -52,8 +52,18 @@
           $('#in-use').show();
           $('#open').hide();
         }
-
       });
+
+      socket.on('inuse', function (msg) {
+        $('#in-use').show();
+        $('#open').hide();
+      });
+
+      socket.on('open', function (msg) {
+          $('#open').show();
+          $('#in-use').hide();
+      });
+
     });
   </script>
 </head>

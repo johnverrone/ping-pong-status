@@ -7,10 +7,19 @@ app.get('/', function(req, res) {
 });
 
 app.get('/toggle', function(req, res) {
-  io.emit('toggle', { data: 'test' });
+  io.emit('toggle');
   res.sendStatus(200);
 });
   
+app.get('/inuse', function(req, res) {
+  io.emit('inuse');
+  res.sendStatus(200);
+});
+
+app.get('/open', function(req, res) {
+  io.emit('open');
+  res.sendStatus(200);
+});
 
 io.on('connection', function(socket) {
   console.log('client connected');
