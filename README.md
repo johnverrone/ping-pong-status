@@ -32,4 +32,3 @@ This app is hosted on PCF on the Google Cloud Platform in the np foundation. Sim
 ## Authors
 
 * **John Verrone** - @john.verrone
-
